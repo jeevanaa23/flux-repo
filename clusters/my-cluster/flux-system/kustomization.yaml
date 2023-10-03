@@ -3,14 +3,3 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
----
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
-metadata:
-  name: podinfo
-  namespace: default
-spec:
-  interval: 5m
-  url: https://github.com/jeevanaa23/flux-repo/clusters/my-cluster/flu-system
-  ref:
-    branch: master
